@@ -1,0 +1,550 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+@media (max-width : 1550px)
+	.infoblock
+		&__short
+			text-align: center
+			min-height: auto
+			margin-bottom: 20px
+			img 
+				max-width: 100%
+				position: relative
+				top: auto
+				right: auto
+				vertical-align: top 
+			&_right 
+				margin-top: 20px
+
+@media (max-width : 1400px)
+	.filter
+		&__item
+			width: calc(33.333%  - 20px)
+			margin-bottom: 15px
+		&__row 
+			justify-content: center
+	.packages
+		&__text
+			font-size: 16px
+			line-height: 1.6
+	.infoblock
+		&__text 
+			p
+				line-height: 2
+				font-size: 16px
+		&__subtitle
+			padding-top: 30px
+		&__body 
+			padding-top: 0
+
+	.offer 
+		ul 
+			li
+				font-size: 16px
+		&__title 
+			font-size: 18px
+			line-height: 24px
+			min-height: 75px
+	.news 
+		&__title 
+			font-size: 18px
+		&__text 
+			font-size: 16px
+			line-height: 25px
+
+@media (max-width : 1300px)
+	.topbar
+		&__contact
+			font-size: 14px
+			a, span
+				padding-left: 30px
+		&__text 
+			margin-right: 15px
+		a 
+			margin-right: 10px
+
+// ≥1200px
+@media (max-width : 1200px)
+	.event__title
+		font-size: 16px
+		line-height: 20px
+	.aside
+		padding-left: 20px
+	.widget
+		&__link 
+			font-size: 18px
+		&__title
+			font-size: 18px
+			padding-left: 30px
+			&::before
+				background-size: contain 
+				width: 20px 
+				height: 20px
+				top: 4px
+	.filter__item 
+		width: calc(41.66666666666667% - 30px)
+	.packages
+		&__icon
+			font-size: 16px
+		&__text 
+			padding-bottom: 15px
+
+	.infoblock
+		&__title 
+			font-size: 30px
+			line-height: 45px
+			min-height: 90px
+		&__subtitle
+			padding-top: 15px
+			font-size: 16px
+			line-height: 24px
+		&__text 
+			p 
+				width: 100%
+				padding-bottom: 10px
+				&:first-child
+					padding-right: 0
+		&__button
+			.button
+				max-width: 210px
+				&_white
+					margin-bottom: 15px
+		&__body 
+			padding-left: 0
+			&_second 
+				padding-right: 0
+	.menu
+		li 
+			font-size: 16px
+
+	.news
+		justify-content: center
+		&__info 
+			width: calc(100% - 270px)
+			&::after 
+				content: none
+		&__image 
+			text-align: center
+			img 
+				max-width: 260px
+				width: 100%
+		&__date 
+			margin-bottom: 0
+		&__text 
+			margin-bottom: 0
+
+@media (max-width : 1100px)
+	.topbar
+		&__text 
+			display: none
+	.contact
+		font-size: 18px
+		&__icon 
+			&::before 
+				width: 30px
+				height: 30px
+				background-size: contain
+	.packages__icon
+		margin-bottom: 10px
+
+	// ≥992px
+@media (max-width : 992px)
+	.filter__item 
+		width: calc(50% - 30px)
+	.breadcrumbs
+		text-align: left
+		margin-bottom: 15px
+	.header
+		min-height: 329px
+	.main 
+		margin-bottom: 25px
+		&__body 
+			margin: 0
+		&__title 
+			padding-top: 30px
+			padding-bottom: 30px
+		&__text 
+			p 
+				padding-bottom: 20px
+
+	.aside
+		max-width: 480px 
+		margin: 0 auto
+		padding-left: 0
+		border-left: 0
+	.form
+		margin-bottom: 20px
+	.mobile-menu
+		display: flex
+		width: 100%
+		min-height: 45px
+		text-align: center
+		align-items: center
+		justify-content: center
+		p 
+			text-transform: uppercase
+			color: $white
+			padding-right: 10px
+			padding-top: 5px
+	.topbar 
+		&__contact
+			a,span
+				font-size: 14px
+				padding-left: 30px
+	.header
+		&__menu
+			position: relative
+			&-active
+				.menu 
+					transform: translate3d(100%,0,0)
+	.menu 
+		transition: all .3s ease
+		position: absolute
+		width: 100%
+		padding-top: 10px
+		top: 45px
+		left: -100%
+		text-align: center
+		border-top: none
+		margin: 0 
+		overflow: hidden
+		overflow-y: scroll
+		height: calc(100vh - 75px)
+		z-index: 2
+		background-color: $white
+		display: inline-block
+		li 
+			width: 100%
+			line-height: 40px
+			font-size: 18px
+			a 
+				width: auto
+				color: $main
+				padding-right: 10px
+			&::after 
+				content: none
+			ul
+				width: 100%
+				position: initial
+				padding: 10px 0
+				top: 45px
+				transition: all .3s ease-out
+				>li 
+					text-align: center
+					padding-right: 0
+					a 
+						color: $grey !important
+		&-item
+			&-has-children
+				.menu-close 
+					display: inline-block !important
+				&_active
+					>ul 
+						display: block !important
+					a
+						&::after 
+							top: 50%
+							background: url(../img/icons/minus.svg) no-repeat right center
+
+	.section
+		margin-top: 60px
+		&__title 
+			font-size: 30px
+			line-height: 40px
+		&__text
+			font-size: 16px
+			line-height: 21px
+	.slider__item
+		font-size: 16px
+		
+	.header
+		&__image 
+			display: none 
+		&__logo 
+			position: relative
+			top: 0
+			height: 172px
+
+	.infoblock__short
+		img 
+			max-width: 480px
+			width: 100%
+			text-align: center
+		&_right 
+			order: -1
+	.banner
+		text-align: center
+// ≥768px
+@media (max-width : 768px)
+	.contact
+		&__icon 
+			padding-left: 45px
+			&-place 
+				margin-bottom: 20px
+	.filter__item 
+		width: calc(100% - 30px)
+	.infoblock__button
+		text-align: center
+	.gallery
+		&__item
+			flex-wrap: wrap
+			justify-content: center
+		&__image 
+			img 
+				margin-bottom: 15px
+
+	.button
+		padding: 20px 10px
+		line-height: 1.4
+		&_white 
+			margin-right: 0
+			margin-bottom: 15px
+
+	.offer 
+		&__body 
+			padding: 0 15px 20px 15px
+
+	.topbar
+		&__contact
+			display: none
+		&__social
+			width: 100%
+			text-align: center
+			.social
+				a 
+					margin-right: 10px
+				&__icon
+					&-phone
+						width: 32px
+						height: 32px
+						display: inline-block
+					&-email
+						width: 43px
+						height: 32px
+						display: inline-block 
+					&-place
+						width: 24px
+						height: 32px
+						display: inline-block
+					&-yelp
+						width: 27px
+						height: 36px
+					&-instagram
+						width: 32px
+						height: 32px
+					&-facebook
+						width: 32px
+						height: 32px
+
+	.packages
+		&__info
+			width: 100%	
+			padding: 20px
+		&__image 
+			margin-right: 0
+			margin: 0 auto
+		&__title 
+			text-align: center
+			padding-bottom: 10px
+		&__icon
+			width: 50%
+			margin-right: 0
+
+	.main
+		&__info
+			flex-direction: column
+		&__category
+			margin-bottom: 10px
+		&__date 
+			margin-bottom: 10px
+		&__link 
+			font-size: 16px
+			a 
+		&__prev
+			&::before 
+				background-size: cover
+				width: 25px
+				height: 25px
+		&__next
+			&::before 
+				background-size: cover
+				width: 25px
+				height: 25px
+	.footer
+		background: $white 
+		min-height: auto
+		&__block 
+			position: relative
+		&__top 
+			padding: 30px 0
+// ≥576px
+@media (max-width : 591px)
+	.slider_text
+		margin-bottom: 40px
+	.current
+		width: 40px 
+		height: 40px
+	.page-numbers 
+		li
+			line-height: 43px
+			margin-bottom: 10px
+			a
+				width: 40px
+				height: 40px
+	.packages
+		&__text
+			text-align: center
+		&__title 
+			line-height: 1.4
+			font-size: 18px
+			span 
+				font-size: 16px
+			.green 
+				border-right: 0
+	.section 
+		margin-top: 40px
+
+	.main__text 
+		p
+			text-align: center
+	.news 
+		&__info
+			order: 2 !important
+			width: 100%
+			padding: 0
+			padding-top: 10px
+			text-align: center
+		&__text 
+			max-width: 100%	
+		&__image 
+			text-align: center
+			order: 1
+			width: auto
+			margin: 0 auto
+			max-width: 100%
+			img 
+				max-width: 100%
+		&__item 
+			margin-bottom: 30px
+			&:nth-child(even)
+				order: inherit
+				.news__info 
+					order: inherit
+					padding-left: 0
+
+	.footer
+		&__top 
+			padding: 30px 15px
+		&__right 
+			width: calc(100% - 30px)
+			text-align: center
+		&__col 
+			width: 100%
+			margin-bottom: 15px
+		&__left
+			width: calc(100% - 30px)
+		&__block
+			bottom: 0
+			top: 25px
+		&__copyright 
+			height: auto
+			padding: 10px 0
+			flex-direction: column
+			span 
+				margin-bottom: 15px
+
+	.infoblock
+		&__title 
+			font-size: 24px
+			line-height: 31px
+			min-height: auto
+			text-align: center
+		&__text,&__subtitle
+			text-align: center
+		
+
+
+	.info__half
+		&:first-child
+			order: 2
+			margin-top: 25px
+
+//: ≥480px
+@media (max-width : 480px)
+	.button
+		font-size: 14px
+
+	.alignleft,.alignright
+		float: none 
+		margin: 10px 0 15px 
+		display: block
+
+	.infoblock__button 
+		a 
+			&:first-child
+				margin-right: 0
+	.packages
+		&__icon
+			width: 100%
+			text-align: center
+			margin-bottom: 15px
+			&:last-child
+				margin-bottom: 0
+			img 
+				display: block
+				margin: 0 auto
+				padding-bottom: 5px
+		&__button
+			a 
+				max-width: 100%
+	.main
+		&__prev 
+			padding-left: 40px
+		&__next 
+			padding-right: 40px
+		&__link 
+			span 
+				font-size: 14px
+	.filter
+		padding: 20px 0
+		border: none 
+		&__item 
+			padding: 15px
+		&__select 
+			select
+				font-size: 16px
+//: ≥380px
+@media (max-width : 380px)
+	//
+
+/*==========  Mobile First  ==========*/
+
+//Extra small
+@media (min-width : 320px)
+	//
+
+//Small
+@media (min-width : 480px)
+	//
+
+//Bigger
+@media (min-width : 768px)
+	//
+
+//Medium
+@media (min-width : 992px)
+	.menu 
+		li
+			&:hover
+				>ul
+					display: block
+
+//Large
+@media (min-width : 1200px)
+	//
+
+// Retina
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
+	//

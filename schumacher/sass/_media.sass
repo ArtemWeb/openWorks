@@ -1,0 +1,279 @@
+@media only screen and (max-width : 1200px)
+	/**/
+@media only screen and (max-width : 1140px)
+	.menu-item
+		padding-right: 25px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+ 
+	.section_image
+		background: none
+	.sidebar
+		margin-bottom: 30px
+		margin: auto
+	.article
+		&__title 
+			font-size: 32px
+	.contact
+		&__left 
+			margin-bottom: 20px
+	.half 
+		margin-bottom: 10px
+	.nav
+		&_header 
+			position: fixed
+			width: 100%
+			top: 160px
+			right: -100%
+			text-align: center
+			transition: all .4s ease
+			margin: 0
+			overflow: hidden
+			z-index: 1
+			&.is-active
+				transform: translate3D(-100%,0,0)
+		&__list 
+			flex-direction: column
+		.menu-item
+			padding-right: 0
+			line-height: 35px
+	.header
+		&__mobile
+			display: block
+		&__background
+			display: block
+			position: fixed
+			width: 100%
+			top: 98px
+			right: -100%
+			text-align: center
+			transition: all .4s ease
+			margin: 0
+			overflow: hidden
+			height: 100%
+			z-index: 1
+			background-color: #fff
+			&.is-active
+				transform: translate3D(-100%,0,0)
+	
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.timeline
+		&__segment
+			display: none
+		&__item 
+			position: relative
+			&::after
+				content: ""
+				position: absolute
+				width: 32px
+				height: 21px
+				display: inline-block
+				background: url(../img/icons/arrow_red.svg) no-repeat center
+				bottom: 8px
+				left: -5px
+				transform: rotate(90deg)
+				right: 0
+				margin: auto
+	.header__top .row
+		width: 100%
+	.nav_header
+		top: 200px
+	.article__image_left
+		float: none
+		margin: auto
+		padding-right: 0
+		padding-bottom: 15px
+	.partner
+		&__item 
+			padding-bottom: 20px
+	body
+		padding-top: 100px
+	.news 
+		justify-content: center
+		&__item 
+			margin-bottom: 15px
+	.block
+		&__short
+			padding-left: 0
+			padding-bottom: 20px
+		p 
+			padding-top: 20px
+		&__long 
+			text-align: center
+	.section
+		padding-top: 40px
+		padding-bottom: 40px
+		&_uber
+			background-image: none
+		&_advantages
+			background: none
+	.cart
+		margin-bottom: 20px
+	.stages__arrow
+		display: none
+	.timeline
+		padding-top: 15px
+		&__item 
+			margin-top: 0
+			padding-bottom: 50px
+			margin-bottom: 10px
+		&__icon 
+			display: none
+		&__block 
+			width: 100%
+			background-color: #fff
+			box-shadow: 0 9px 26px 3px rgba(14,62,129,.19)
+			border-radius: 10px 
+			padding: 20px 15px
+		&__segment
+			z-index: -1
+		&__text 
+			margin-bottom: 10px
+		&__line 
+			width: 2px
+			background-color: $red
+	.stages__item
+		margin-bottom: 20px
+	.contacts
+		&__email
+			padding-left: 0
+		&__phone 
+			margin: 0
+	.header
+		&__background
+			top: 98px
+		&__top 
+			position: fixed
+			width: 100%
+			top: 120px
+			right: -100%
+			text-align: center
+			transition: all .4s ease
+			margin: 0
+			overflow: hidden
+			z-index: 2
+			background: none
+			&.is-active
+				transform: translate3D(-100%,0,0)
+			.row 
+				a 
+					color: $text
+				flex-direction: column
+				height: auto
+		&_fixed
+			top: 0
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 600px)
+	.section__title
+		font-size: 35px
+	.header__text
+		display: none
+	.footer
+		&__info
+			justify-content: center
+		ul 
+			flex-direction: column
+			text-align: center
+		li 
+			padding-left: 0
+			width: 100%
+	.form
+		&__input
+			margin-bottom: 10px
+
+
+@media only screen and (max-width : 480px)
+	.button_checker
+		margin-top: 15px
+	.checker
+		text-align: center
+	.timeline
+		&__block
+			padding: 10px 15px 30px 
+		&__title 
+			font-size: 18px
+			display: flex 
+			flex-direction: column 
+			span 
+				margin-bottom: 10px
+	.section_blue2
+		background: #005bac
+	.hero__info
+		padding: 35px 20px 40px 20px
+	.article
+		&__title 
+			font-size: 24px
+		&__date 
+			margin-bottom: 15px
+	.half
+		max-width: 100%
+	.partner
+		flex-direction: column
+		&__item 
+			margin: 0
+	.stages
+		&__block
+			justify-content: center
+			flex-direction: column
+		// &__arrow 
+		// 	display: block
+		// 	right: 0
+		// 	left: 0
+		// 	top: 0
+		// 	margin: auto
+		// 	bottom: -210px
+		// 	transform: rotate(90deg)
+		&__item 
+			margin-bottom: 50px
+			&::after
+				bottom: -35px
+				right: -4px
+				left: 0
+				margin: auto
+				transform: rotate(90deg)
+	.timeline__block
+		padding-right: 15px
+	.contact__left 
+		padding: 40px 15px 35px 15px
+		&__textarea
+			margin-top: 10px
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	.stages
+		&__item 
+			&::after
+				top: 26%
+
+@media only screen and (min-width : 600px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+@media only screen and (min-width : 1140px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/

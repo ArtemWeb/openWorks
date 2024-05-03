@@ -1,0 +1,331 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@media (max-width : 1575px)
+	.hero
+		background-position: center right
+
+@media (max-width : 1275px)
+	.hero
+		&__image
+			right: 0
+		&__info 
+			background-color: $white
+			border-radius: 15px 
+			opacity: 0.9
+
+@media (max-width : 1260px)
+	.category
+		width: calc(100% + 20px)
+		margin-left: -10px
+		margin-right: -10px
+@media (max-width : 1200px)
+	.card__item 
+		padding: 35px 20px 20px
+	.hero__image
+		right: 0
+	.form 
+		&__bottom 
+			justify-content: center
+			flex-direction: column
+			p
+				margin-top: 15px
+				width: 100%
+				text-align: center
+	.menu 
+		&__link 
+			padding: 0 30px
+	.about
+		&__right_second
+			padding: 35px 15px
+		&__left_second
+			padding: 35px 20px
+
+@media (max-width : 1110px)
+	.menu 
+		&__link 
+			padding: 0 20px
+			background-position: center right 
+		&__item
+			&_parent
+				background-position: center right 
+	.header__search
+		margin-right: -10px
+		margin: 0 auto
+@media (max-width : 992px)
+	.button_header
+		box-shadow: none
+	.product
+		&__gallery
+			margin-left: 15px
+			width: calc(100% - 30px)
+		&__body 
+			margin-top: 20px
+			margin-right: 15px
+			width: calc(100% - 30px)
+	.card__item
+		width: calc(50% - 20px)
+	.category__item
+		width: calc(33.333333333333336% - 20px)
+	body
+		padding-top: 75px
+		background: transparent
+	.header
+		transition: all .3s ease
+		position: fixed
+		width: 100%
+		padding-top: 40px
+		top: 65px
+		right: -100%
+		text-align: center
+		margin: 0
+		overflow: hidden
+		overflow-y: scroll
+		height: calc(100vh - 55px)
+		z-index: 2
+		background-color: $white
+		&_active
+			transform: translate3d(-100%,0,0)
+		&__logo 
+			display: none
+		&__top 
+			box-shadow: none
+			position: absolute
+			left: 0
+			right: 0
+			margin: 0 auto
+			top: 25%
+		&__bottom 
+			.row
+				flex-direction: column
+		&__contact
+			flex-direction: column
+			margin-top: 20px
+		&__phone 
+			margin-right: 0
+			margin-bottom: 15px
+
+	.mobile-menu
+		display: flex
+		align-items: center
+		justify-content: space-between
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 10
+		width: 100%
+		height: 75px
+		background: #fff
+		transition: all .5s ease
+		a 
+			margin-left: 15px
+			margin-right: 15px
+	.menu
+		&__list 
+			flex-direction: column
+		&__item 
+			border: none
+			&:last-child
+				border: none
+	.submenu
+		left: -115px
+
+	.footer 
+		&__col 
+			text-align: center
+			margin-top: 15px
+			&_width
+				width: calc(50% - 30px)
+	.hero
+		&::before 
+			content: ""
+			width: 100%
+			height: 100%
+			background-color: $main
+			position: absolute
+			opacity: 0.5
+		&__image 
+			display: none
+		&__title 
+			color: $white
+		&__subtitle
+			color: $white
+		&__info 
+			background-color: transparent
+			border: none 
+			opacity: none
+	.button_hero
+		background-color: $white
+		color: $main
+	.about
+		&__right
+			margin-top: 15px
+			text-align: center
+			&_second
+				text-align: left
+				margin-right: 0
+				padding: 45px 21px
+		&__left_second
+			margin-top: 25px
+		&__block 
+			padding: 15px
+	.form 
+		padding: 45px 
+		background: #6C73E1
+		box-shadow: 0px 0px 40px rgba(65, 60, 56, 0.17)
+		&__title 
+			font-size: 20px
+	.infoblock
+		&__text
+			font-size: 14px
+		&_normal 
+			min-height: 80px
+			padding-top: 10px
+		&__item 
+			margin-bottom: 15px
+	.section
+		&__title
+			font-size: 25px
+			margin-bottom: 40px
+		&__subtitle
+			text-align: center
+	.description
+		&__left 
+			margin-right: 15px
+			width: calc(100% - 30px)
+			margin-bottom: 20px
+		&__right 
+			margin-left: 15px
+			width: calc(100% - 30px)
+	.breadcrumb
+		line-height: 23px
+// ≥768px
+@media (max-width : 768px)
+	.advantages
+		&__arrow
+			display: none
+	.section__link
+		text-align: center
+		width: 100%
+		margin-top: 25px
+	.category
+		&__item 
+			width: calc(50% - 20px)
+			padding: 20px
+		&__text 
+			font-size: 14px
+	.catalog
+		width: calc(100% - 20px)
+	.aside
+		margin-top: 20px
+		order: 2
+		margin-right: 15px
+		width: calc(100% - 30px)
+		&__image 
+			text-align: center
+	.card
+		width: calc(100% + 20px)
+		margin-left: -10px
+		margin-right: -10px
+// ≥576px
+@media (max-width : 576px)
+	.footer 
+		.row
+			flex-direction: column
+			justify-content: center
+		&__col 
+			text-align: center
+			margin-top: 15px
+			&_width
+				width: calc(100% - 30px)
+	.section__text
+		padding: 25px 20px
+//: ≥480px
+@media (max-width : 480px)
+	.mobile-menu
+		.logo
+			background-size: contain
+	.infobox
+		padding: 25px 10px 15px 15px
+		&::after 
+			right: 110px
+		&__left 
+			max-width: 57%
+		&__item 
+			font-size: 14px
+	.card__item
+		width: calc(100% - 20px)
+	.catalog
+		&__bottom
+			flex-direction: column 
+		&__title 
+			font-size: 21px
+	.pagination
+		margin-bottom: 15px
+	.hero
+		&__title 
+			font-size: 28px
+			line-height: 37px
+	.about
+		&__left
+			padding: 20px
+		&__title 
+			font-size: 20px
+
+	.form 
+		padding: 45px 0
+		&__title 
+			padding-left: 15px
+			padding-right: 15px
+	.section
+		margin-bottom: 50px
+		&__info 
+			justify-content: center
+		&__title
+			font-size: 21px
+			line-height: 29px
+			padding-left: 0
+			text-align: center
+			&::before
+				content: none
+	.product
+		&__info
+			padding: 21px 5px
+		&__text 
+			padding: 15px 12px 
+			text-align: center
+	.aside
+		margin-bottom: 30px
+//: ≥380px
+@media (max-width : 380px)
+	//
+
+/*==========  Mobile First  ==========*/
+
+//Extra small
+@media (min-width : 320px)
+	//
+
+//Small
+@media (min-width : 480px)
+	//
+
+//Bigger
+@media (min-width : 768px)
+	//
+
+//Medium
+@media (min-width : 992px)
+	//
+
+//Large
+@media (min-width : 1200px)
+	.gallery__main
+		min-height: 605px 
+		height: 100%
+
+// Retina
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
+	//

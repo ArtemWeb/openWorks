@@ -1,0 +1,595 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+@media (max-width : 1250px)
+	.topbar
+		&__discounts
+			border-right: 0
+	.header
+	.slider_brands,.slider_tags
+		max-width: 100%
+		.flickity-prev-next-button.next
+			right: 0
+			border-color: $orange
+		.flickity-prev-next-button.previous
+			left: 0
+			border-color: $orange
+		
+// ≥1200px
+@media (max-width : 1200px)
+	.topbar__text
+		font-size: 14px
+	.header
+		&__body
+		 ul a
+			font-size: 14px
+		&__contact a
+			font-size: 14px
+	.category__info li
+		font-size: 16px
+
+	.product
+		&__body_color
+			width: 100%
+			padding-top: 15px
+			position: initial
+		&_color
+			justify-content: center
+		&__weights_color
+			position: absolute
+			flex-direction: column
+			display: flex
+			top: 20px !important
+			left: 20px !important
+		&__weight_color
+			margin-right: 0
+			margin-bottom: 10px
+		&__badges_color
+			top: 20px !important
+			right: 20px !important
+	.card
+		&__body
+			padding-left: 0
+		&__buttons
+			padding: 15px
+	.menu__list .menu-item>a
+		font-size: 14px
+	.button_quick
+		padding: 15px 20px
+		font-size: 14px
+
+@media (max-width : 1100px)
+	.category
+		&__item
+			padding: 30px 15px 15px
+		&__image 
+			min-width: 65px
+			img 
+				max-width: 90%
+		&__info 
+			width: calc(100% - 130px)
+			li 
+				font-size: 14px
+	body
+		padding-top: 50px
+
+	.header
+		transition: all .3s ease
+		position: fixed
+		width: 100%
+		padding-top: 40px
+		top: 50px
+		right: -100%
+		text-align: center
+		margin: 0
+		overflow: hidden
+		overflow-y: scroll
+		height: calc(100vh - 50px)
+		z-index: 2
+		background-color: $white
+		&_active
+			transform: translate3d(-100%,0,0)
+		.logo
+			display: none
+		&__top 
+			display: none
+		&__bottom
+			order: 2
+			width: 100%
+			margin-bottom: 25px
+		&__middle
+			order: 1
+			width: 100%
+			.row 
+				flex-direction: column 
+				justify-content: center
+				padding: 0
+		&__body 
+			width: calc(100% - 30px)
+			display: flex
+			flex-direction: column
+			li 
+				padding-bottom: 5px
+			ul 
+				order: 2
+				justify-content: center
+				flex-direction: column
+		&__input 
+			width: 50%
+			margin-bottom: 10px
+		&__info 
+			width: calc(100% - 30px)
+			justify-content: center
+			margin-top: 10px
+			margin-bottom: 10px
+			a 
+				font-size: 14px
+		&__contact 
+			width: calc(100% - 30px)
+			padding-left: 0
+			>a 
+				width: 100%
+		&__general
+			order: 1
+			justify-content: center
+	
+	.menu
+		&__list 
+			flex-direction: column
+			>.menu-item 
+				border-right: none
+				line-height: 40px
+				width: 100%
+				&:first-child
+					border-left: 0
+				&_parent
+					.active
+						background-color: $main
+						color: $white !important
+						&::after 
+							background: url(../img/icons/arrow_up-white.svg) no-repeat right
+						+ ul
+							display: block
+
+	.submenu
+		left: 0
+		top: 40px
+		right: 0
+		margin: auto
+		max-height: calc(100vh - 340px)
+		overflow: scroll
+		position: initial
+		max-width: 100%
+		&__all 
+			display: block
+		&__menu 
+			flex-direction: column
+			max-width: 100%
+			border-right: none
+			width: 100%
+		&__block 
+			width: 100%
+			left: 0
+			border: 1px solid $border
+			text-align: center
+		&__brands 
+			width: 100%
+		&__brend 
+			a 
+				margin-bottom: 10px
+				&:last-child
+					margin-bottom: 0
+		&__item 
+			>a 
+				padding: 10px 30px
+				text-align: center
+			&-parent 
+				>a 
+					&::after 
+						content: ""
+						width: 10px
+						height: 8px
+						display: inline-block
+						background: url(../img/icons/arrow_down.svg) no-repeat right
+						background-size: 55%
+						z-index: 0
+						padding-left: 20px
+				.active
+					+ .submenu__block
+						display: flex !important
+						top: 45px
+
+	.mobile-menu
+		display: flex
+		align-items: center
+		justify-content: space-between
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 10
+		width: 100%
+		height: 50px
+		background: #fff
+		transition: all .5s ease
+		border-bottom: 1px solid $light
+		a 
+			margin-left: 15px
+			margin-right: 15px
+		.logo
+			background: url(../img/logo_mobile.svg) no-repeat center left
+
+	.topbar
+		flex-direction: column
+		justify-content: center
+		height: auto
+
+	.selector
+		&__item
+			padding: 14px 0 14px 80px 
+			background-position: center left 10px
+			font-size: 14px
+			&::after 
+				content: none
+			&_small
+				padding: 0
+				background-position: 0
+				font-size: 20px
+	.product
+		&__title
+			font-size: 16px
+			padding-top: 15px
+		&_catalog
+			width: calc(50% - 10px)
+	.card
+		&__subtitle
+			font-size: 16px
+		&__text 
+			font-size: 14px
+		&__body
+			font-size: 14px
+// ≥992px
+@media (max-width : 992px)
+	.advantages
+		margin-left: -15px
+		margin-right: -15px
+		&__item 
+			margin-left: 15px
+			margin-right: 15px
+			margin-bottom: 20px
+	.row_small,.row_product
+		margin-left: -15px
+		margin-right: -15px
+	.selector
+		&__tab 
+			.row, .row_small
+				margin-left: -15px
+				margin-right: -15px
+		&__card
+			margin-left: 15px
+			margin-right: 15px
+	.category
+		&__item
+			margin-left: 15px
+			margin-right: 15px
+			flex-direction: column 
+		&__image 
+			min-width: 110px
+			text-align: center
+			margin-bottom: 15px
+			img 
+				max-width: 100%
+		&__info 
+			padding-left: 0
+			text-align: center
+			width: 100%
+			li 
+				font-size: 16px
+	.footer
+		&__col
+			margin-bottom: 20px
+	.aside
+		order: 2
+		margin-top: 10px
+		margin-right: 15px
+		padding: 15px
+	.catalog 
+		margin-left: 15px
+	.card
+		&__gallery
+			margin-bottom: 20px
+		&__body
+			margin-bottom: 15px
+		&__block 
+			border-left: none 
+			padding-left: 0
+	.section
+		&__title 
+			font-size: 21px
+			line-height: 26px
+		&__subtitle
+			font-size: 16px
+	.gallery
+		max-width: 425px 
+		margin: auto
+// ≥768px
+@media (max-width : 768px)
+	.card__brand 
+		position: relative
+	.about
+		&__right 
+			padding-top: 20px
+	.selector
+		&__item 
+			max-width: 49%
+			margin-bottom: 10px
+			border-radius: 15px 
+			border-bottom: 2px solid $light
+			min-height: 70px
+			background-size: 40px
+			padding: 14px 0 14px 70px
+			&_4 
+				background-size: 30px
+				background-position: 15px center
+			&_small
+				max-width: max-content 
+				min-height: min-content 
+				border-bottom: 0 
+				margin-bottom: 0
+				padding: 0
+				margin-right: 15px
+				max-width: max-content
+				min-height: min-content
+				font-size: 14px
+				&::after 
+					content: none !important
+		&__body_small 
+			margin-top: 0
+		&__body 
+			padding: 30px 0
+		
+	.section
+		&_bigmargin
+			margin-top: 60px
+		&__title_width
+			width: 100%
+	.row_product
+		justify-content: center
+	.button_form
+		margin-left: 0
+		margin-top: 15px
+		padding: 15px 65px
+	.product 
+		&_color
+			margin-left: 15px
+			margin-right: 15px
+// ≥576px
+@media (max-width : 576px)
+	.footer
+		padding: 30px 0
+		.row 
+			flex-direction: column
+			justify-content: center
+			text-align: center
+		&__socials
+			justify-content: center
+		.search_footer
+			text-align: center
+			margin: 0 auto
+			margin-top: 10px
+	.section
+		&__title_big
+			font-size: 21px
+			line-height: 30px
+		&__title 
+			text-align: center
+			flex-direction: column
+	.product
+		padding: 25px 10px
+		&:hover 
+			box-shadow: none
+		// &__image 
+		// 	padding-bottom: 90%
+		&__weights
+			left: 5px
+			top: 5px
+		&__badges 
+			right: 5px
+			top: 5px
+	.price
+		&__old
+			padding-right: 10px
+			font-size: 14px
+		&__new 
+			font-size: 18px
+	.logo_footer
+		margin-left: 0
+		margin-bottom: 15px
+	.form__title
+		font-size: 18px
+		line-height: 28px
+	.card
+		&__weight 
+			.product__weight
+				margin-top: 10px
+		&__brand 
+			margin: auto
+//: ≥480px
+@media (max-width : 480px)
+	.selector
+		&__item
+			max-width: 100%
+			background-size: 40px
+			min-height: 60px
+			padding: 14px 0 14px 70px
+			br 
+				display: none
+			&_3 
+				background-size: 30px
+				background-position: 15px center
+			&_4
+				background-size: 30px
+				background-position: 15px center
+			&_small
+				padding: 0
+				margin-right: 0
+				max-width: max-content
+				min-height: min-content
+				font-size: 14px
+		&__heading_small
+			display: flex 
+			justify-content: space-between
+			flex-wrap: wrap
+		&__body_small 
+			margin-top: 0
+	.section
+		margin-top: 20px
+		&__title
+			a 
+				padding-top: 10px
+	.footer__info
+		margin-right: 20px
+
+	.toolbar
+		right: 10px
+		&__basket
+			margin-right: 0
+			transform: none
+			a 
+				width: 40px
+				height: 40px
+				background-position: center
+				background-size: 50%
+		&__popup 
+			transform: none
+			margin-right: 0
+			a 
+				width: 40px
+				height: 40px
+				background-position: center
+				background-size: 50%
+		&__info 
+			display: none 
+		&__block 
+			display: none
+
+	.product
+		margin-left: 15px
+		margin-right: 15px
+		&_catalog
+			width: calc(100% - 30px)
+		&__text 
+			font-size: 14px
+			line-height: 1.4
+		&__weight_color
+			padding: 7px 10px
+
+	.catalog__product 
+		.row
+			margin-left: -15px
+			margin-right: -15px
+			width: calc( 100% + 30px)
+	.slider
+		&_brands
+			padding: 30px 0
+			max-width: 100%
+			.flickity-prev-next-button.next
+				right: 40%
+				border-color: $orange
+				top: 95%
+				transform: translateY(0)
+			.flickity-prev-next-button.previous
+				left: 40%
+				border-color: $orange
+				top: 95%
+				transform: translateY(0)
+		&_tags
+			padding: 50px 0
+			.flickity-prev-next-button.next
+				right: 40%
+				border-color: $orange
+				top: 75%
+				transform: translateY(0)
+			.flickity-prev-next-button.previous
+				left: 40%
+				border-color: $orange
+				top: 75%
+				transform: translateY(0)
+	.infoblock
+		&__text 
+			p
+				font-size: 14px
+		&__list 
+			font-size: 14px
+	.breadcrumbs
+		span,.current
+			font-size: 12px
+//: ≥380px
+@media (max-width : 380px)
+	//
+
+/*==========  Mobile First  ==========*/
+
+//Extra small
+@media (min-width : 320px)
+	//
+
+//Small
+@media (min-width : 480px)
+	//
+
+//Bigger
+@media (min-width : 768px)
+	//
+
+//Medium
+@media (min-width : 992px)
+	//
+
+//Large
+@media (min-width : 1100px)
+	.menu-item_parent 
+		&:hover 
+			background-color: $main
+			&::after 
+				content: ""
+				width: 100%
+				height: 100%
+				min-height: 1000%
+				display: inline-block
+				position: absolute
+				top: 65px 
+				left: 0
+			.menu__list 
+				background: #fff
+			>a
+				color: $white !important
+				&::after 
+					background: url(../img/icons/arrow_up-white.svg) no-repeat right
+			.submenu
+				display: block
+
+	.submenu__item-parent
+		>a
+			position: relative
+			&::after 
+				content: ""
+				width: 10px
+				height: 10px
+				display: inline-block
+				background: url(../img/icons/arrow_rightsmall.svg) no-repeat
+				position: absolute
+				right: 15px
+				z-index: 0
+				top: 50%
+				transform: translateY(-50%)
+		&:hover 
+			a
+				&::after 
+					background: url(../img/icons/arrow_right-orange.svg) no-repeat
+			.submenu__block
+				display: flex !important
+// Retina
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
+	//
