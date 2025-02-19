@@ -1,0 +1,97 @@
+.advantages{
+	background-color: $light;
+	padding: 6rem 0;
+	@include media(">=desktop"){
+		padding: 13rem 0;
+	}
+	h3{
+		text-align: center;
+		margin-bottom: 2.3rem;
+		span{
+			color: $green;
+		}
+	}
+	&-image{
+		margin-bottom: 3rem;
+		@include media(">=desktop"){
+			margin-left: calc(-50vw + 55rem);
+			margin-right: 0;
+			flex: 1 1 69%;
+			margin-bottom: 0;
+		}
+		@include media(">=laptop"){
+			margin-left: calc(-50vw + 61rem);
+		}
+		img{
+			width: 100%;
+		}
+	}
+	&-content{
+		@include media(">=desktop"){
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+		}
+	}
+	.block{
+		text-align: center;
+	
+		@include media(">=desktop"){
+			margin-left: -6rem;
+			text-align: left;
+		}
+		&-info{
+			width: 100%;
+			background-color: $white;
+			padding: 3rem;
+			text-align: center;
+			@include media(">=desktop"){
+				padding: 3rem 3rem 2rem;
+				display: flex;
+				flex-wrap: wrap;
+				column-gap: 3rem;
+				max-width: 70.5rem;
+				text-align: left;
+			}
+			@include media(">=laptop"){
+				padding: 4rem 5rem 2rem;
+			}
+		}
+		&-item{
+			&:not(:last-child){
+				margin-bottom: 2rem;
+				@include media(">=phone"){
+					margin-bottom: 3rem;
+				}
+			}
+			@include media(">=desktop"){
+				flex: 1 1 calc(50% - 3rem);
+			}
+			p{
+				margin: 0;
+				font-size: 1.4rem;
+			}
+			h6{
+				background-color: $green;
+				color: $white;
+				margin-bottom: 1.2rem;
+				padding: 0;
+				line-height: 1;
+				text-transform: uppercase;
+				padding: 0.8rem 0.7rem;
+				display: inline-block;
+				letter-spacing: 0.3rem;
+			}
+			h2{
+				margin-bottom: 1rem;
+				color: $green;
+			}
+		}
+		.btn{
+			margin-top: 0.8rem;
+			@include media(">=laptop"){
+				margin-left: 8rem;
+			}
+		}
+	}
+}

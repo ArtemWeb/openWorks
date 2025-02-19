@@ -1,0 +1,99 @@
+.services{
+	margin: 0 2rem;
+	padding: 3rem 0;
+	@include media(">=desktop"){
+		padding: 6rem 0 6rem;
+	}
+	@include media(">=laptop"){
+		padding: 12rem 0 6rem;
+	}
+	h3{
+		text-align: center;
+		padding-bottom: 4rem;
+	}
+	.item{
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		@include media("<=tablet"){
+			justify-content: center;
+		}
+		&-elem{
+			@include media(">=phone"){
+				flex: 0 1 calc(50% - 1rem);
+			}
+			@include media(">=tablet"){
+				flex: 0 1 calc(25% - 1rem);
+			}
+			position: relative;
+			&::after{
+				content:"";
+				width: 100%;
+				height: 100%;
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				transition: background .3s ease;
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 22%, rgba(0, 0, 0, 0.64) 94.47%);
+				@include media(">=tablet"){
+					background: linear-gradient(180deg, rgba(0, 0, 0, 0) 64.29%, rgba(0, 0, 0, 0.64) 94.47%);
+				}
+			}
+			&:hover{
+				&::after{
+					transition: background .3s ease;
+					background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.64) 94.47%);
+				}
+			}
+			h5{
+				position: absolute;
+				left: 1rem;
+				bottom: 2.5rem;
+				color: $white;
+				z-index: 2;
+				@include media(">=tablet"){
+					left: 3rem;
+					bottom: 2.5rem;
+				}
+			}
+			&_video{
+				@include media(">=phone"){
+					flex: 0 1 calc(100% - 1rem);
+				}
+				@include media(">=tablet"){
+					flex: 0 1 calc(50% - 1rem);
+				}
+				&:before{
+					content:"";
+					width: 3rem;
+					height: 2.5rem;
+					display: inline-block;
+					left: 2rem;
+					top: 2rem;
+					position: absolute;
+					background: url(../image/icon-video.svg) no-repeat center/cover;
+					z-index: 1;
+					@include media(">=tablet"){
+						width: 5rem;
+						height: 3.8rem;
+						left: 3rem;
+						top: 2.4rem;
+					}
+				}
+				.item-elem_image{
+					aspect-ratio: 915/538;
+				}
+			}
+			&_image{
+				position: relative;
+				aspect-ratio: 450/538;
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
+}

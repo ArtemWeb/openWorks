@@ -1,0 +1,131 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site
+// -----------------------------------------------------------------------------
+
+.footer {
+	background-color: $grey;
+	padding: 3rem 0 1.5rem;
+	&-top {
+		.row {
+			border-bottom: 1px solid rgba(44, 44, 54, 0.2);
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 2rem 1rem;
+			padding-bottom: 1.6rem;
+			flex-direction: column;
+			@include media(">=tablet") {
+				flex-direction: initial;
+			}
+		}
+	}
+	&-logo {
+		display: inline-block;
+		&:hover {
+			opacity: 0.8;
+			transition: opacity 0.2s ease;
+		}
+	}
+	&-nav {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		text-transform: uppercase;
+		justify-content: center;
+		gap: 1rem 3rem;
+		flex-direction: inherit;
+		@include media(">=phone") {
+			flex-direction: initial;
+		}
+		a {
+			font-size: 1.4rem;
+			font-weight: $font-weight-medium;
+			color: $dark;
+			transition: color 0.2s ease;
+			position: relative;
+			&:after {
+				content: "";
+				width: 0;
+				height: 1px;
+				background-color: $green;
+				position: absolute;
+				bottom: -5px;
+				left: 0;
+				transition: width 0.3s ease-in;
+			}
+			&:hover {
+				color: $green;
+				transition: color 0.2s ease;
+				&::after {
+					width: 100%;
+					transition: width 0.3s ease-out;
+				}
+			}
+		}
+	}
+	&-copyright {
+		.row {
+			padding-top: 2rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 1rem;
+			color: #8c8c8c;
+			font-size: 1.4rem;
+			font-family: $font-family-gilroy;
+			flex-direction: column;
+			@include media(">=tablet") {
+				flex-direction: initial;
+			}
+			.footer-nav {
+				text-transform: none;
+				gap: 1rem 5rem;
+				flex-direction: column;
+				a{
+					color: #8c8c8c;
+				}
+				@include media(">=tablet") {
+					flex-direction: initial;
+				}
+			}
+		}
+		.developed a{
+			color: $dark;
+			font-family: $font-family-raleway;
+			&:hover{
+				color: $green;
+			}
+			b{
+				color: red;
+			}
+		}
+	}
+}
+
+.socials {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	li a {
+		width: 4rem;
+		height: 4rem;
+		background-color: $white;
+		border-radius: 50%;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid $white;
+		transition: border-color 0.2s ease;
+		&:hover {
+			border-color: $green;
+		}
+		img {
+			width: 1.9rem;
+			height: 1.9rem;
+		}
+	}
+}

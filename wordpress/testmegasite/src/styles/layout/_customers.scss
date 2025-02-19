@@ -1,0 +1,89 @@
+.customers{
+	background-color: $light;
+	padding: 5rem 0 ;
+	margin-bottom: 0.4rem;
+	@include media(">=tablet"){
+		padding: 12rem 0 9.5rem;
+	}
+	&-info{
+		display: flex;
+		flex-direction: column;
+		@include media(">=tablet"){
+			flex-direction: initial;
+			align-items: center;
+			justify-content: space-between;
+			column-gap: 3.4rem;
+		}
+		h3{
+			padding-bottom: 1.2rem;
+			text-align: center;
+			@include media(">=tablet"){
+				text-align: left;
+			}
+		}
+		p{
+			font-size: 1.8rem;
+		}
+	}
+	&-half{
+		min-width: 0;
+		order: 2;
+		@include media(">=tablet"){
+			flex: 0 0 calc(50% - 3.4rem);
+			order: 1;
+		}
+		&.order{
+			order: 1;
+			margin-bottom: 2rem;
+			@include media(">=tablet"){
+				order: 2;
+				margin-bottom: 0;
+			}
+		}
+	}
+	&-block{
+		background-color: $white;
+		min-width: 0 !important;
+		position: relative;
+	}
+	&-slider{
+		overflow: hidden;
+	}
+	&-grid{
+		display: flex !important;
+		flex-wrap: wrap;
+		gap: 2rem;
+		@include media("<=tablet"){
+			justify-content: center;
+		}
+		@include media(">=tablet"){
+			gap: 4rem 2rem;
+		}
+	}
+	&-item{
+		flex: 0 1 calc(45% - 2rem);
+		@include media(">=tablet"){
+			flex: 0 1 calc(30% - 2rem);
+		}
+		img{
+			aspect-ratio: auto;
+		}
+	}
+	.swiper-wrapper {
+		padding: 3.4rem 3rem;
+	}
+	.swiper-pagination{
+		bottom: -3rem !important;
+		span{
+			background-color: #2C2C36;
+			width: 1rem;
+			margin: 0 0.5rem;
+			height: 0.2rem;
+			border-radius: 0;
+			&.swiper-pagination-bullet-active{
+				background-color: $green;
+				width: 3.7rem;
+			}
+		}
+	}
+}
