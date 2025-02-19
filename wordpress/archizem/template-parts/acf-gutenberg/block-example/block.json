@@ -1,0 +1,15 @@
+{
+    "name": "acf\/block-example",
+    "title": "Block Example",
+    "acf": {
+        "renderTemplate": "block-example.php",
+        "mode": "preview"
+    },
+    "description": "",
+    "category": "custom-acf-blocks",
+    "icon": "editor-code",
+    "keywords": [],
+    "supports": {
+        "anchor": true
+    }
+}
